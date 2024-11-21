@@ -13,7 +13,7 @@ group14_data <- data.frame(
 
 # Plot 1: Hemocytometer counts
 plot1 <- ggplot(group14_data, aes(x = time, y = hemocytometer)) +
-  geom_line(aes(group = 1)) +  # Add group = 1 to force connection
+  geom_line(aes(group = 1)) +  # Group = 1 to force line connection --> ditto for other plots 
   geom_point(size = 3) +
   labs(title = "Rhodomonas Concentration vs Time (Hemocytometer)",
        x = "Time (hours)",
@@ -23,7 +23,7 @@ plot1 <- ggplot(group14_data, aes(x = time, y = hemocytometer)) +
 
 # Plot 2: FCM counts
 plot2 <- ggplot(group14_data %>% filter(!is.na(fcm)), aes(x = time, y = fcm)) +
-  geom_line(aes(group = 1)) +  # Add group = 1 to force connection
+  geom_line(aes(group = 1)) +  
   geom_point(size = 3) +
   labs(title = "Rhodomonas Concentration vs Time (FCM)",
        x = "Time (hours)",
@@ -33,7 +33,7 @@ plot2 <- ggplot(group14_data %>% filter(!is.na(fcm)), aes(x = time, y = fcm)) +
 
 # Plot 3: Fluorescence
 plot3 <- ggplot(group14_data %>% filter(!is.na(fluorescence)), aes(x = time, y = fluorescence)) +
-  geom_line(aes(group = 1)) +  # Add group = 1 to force connection
+  geom_line(aes(group = 1)) + 
   geom_point(size = 3) +
   labs(title = "Rhodomonas Concentration vs Time (Fluorescence)",
        x = "Time (hours)",
