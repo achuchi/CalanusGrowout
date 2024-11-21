@@ -3,7 +3,7 @@ library(ggplot2)
 library(tidyr)
 library(dplyr)
 
-# Data Sorting
+# Data Sorting --> Normally I just read.csv from the xlsx file, but for small (n) counts it's easier to manually enter than fiddle with the columns, rownames, etc. 
 group14_data <- data.frame(
   time = c(0.0, 0.5, 1.0, 1.5, 2.0, 3.3, 3.7, 4.2, 4.7, 5.2),
   hemocytometer = c(25600, 20000, 11100, 15600, 4400, 12100, 11500, 5400, 13900, 8490),
